@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    function writeObj(obj){
+        var description = "";
+        for(var i in obj){
+          var property = obj[i];
+          description += i + " = " + property + "\n";
+        }
+        alert(description);
+    }
+      $(document).mousemove(function(e){
+        writeObj(e);
+        $("span").text(e.pageX + ", " + e.pageY);
+      });
+});
+</script>
+</head>
+<body>
+<p>鼠标位于坐标： <span></span>.</p>
+</body>
+</html>
